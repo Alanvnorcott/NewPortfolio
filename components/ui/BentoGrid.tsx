@@ -9,6 +9,7 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 
+
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode; }) => {
   return (
     <div className={cn(
@@ -64,6 +65,7 @@ export const BentoGridItem = ({
       "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
       className
     )}
+    
     style={{
       background: "rgb(211, 227, 227)",
       backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -78,6 +80,7 @@ export const BentoGridItem = ({
               className={cn(imgClassName, "object-cover object-center")}
             />
           )}
+          
         </div>
         <div className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"}`}>
           {spareImg && (
