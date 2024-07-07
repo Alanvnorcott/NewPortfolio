@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
@@ -6,6 +7,9 @@ import { FaLocationArrow } from 'react-icons/fa';
 import { FaArrowPointer } from 'react-icons/fa6';
 import { BackgroundBeams } from './ui/background-beams';
 import { Boxes } from './ui/background-boxes';
+import { HeroHighlight } from './ui/hero-highlight';
+import { Highlight } from './ui/hero-highlight';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
@@ -33,10 +37,32 @@ const Hero = () => {
                     <h2 className="uppercase tracking-widest text-xs text-center text-blue max-w-80">
                         SWE | FULL STACK | DEVELOPER
                     </h2>
-                    <TextGenerateEffect
-                        className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                        words="Designing and Engineering Exceptional User Experiences"
-                    />
+
+
+                     <HeroHighlight>
+                    <motion.h1
+                        initial={{
+                        opacity: 0,
+                        y: 20,
+                        }}
+                        animate={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        }}
+                        transition={{
+                        duration: 0.5,
+                        ease: [0.4, 0.0, 0.2, 1],
+                        }}
+                        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+                    >
+                        Designing and Engineering
+                        is a{" "}
+                        <Highlight className="text-black dark:text-white">
+                        Exceptional User Experiences.
+                        </Highlight>
+                    </motion.h1>
+                    </HeroHighlight>
+
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-black-200 dark:text-white-200">
                       Hi, I&apos;m Alan, a full stack developer based in NYC Metropolitan Area

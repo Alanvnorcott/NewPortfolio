@@ -12,7 +12,7 @@ const GridGlobe = () => {
     pointSize: 4,
     globeColor: "#3498db",
     showAtmosphere: true,
-    atmosphereColor: "#3498db",
+    atmosphereColor: "#7dd3fc",
     atmosphereAltitude: 0.3,
     emissive: "#383d3b",
     emissiveIntensity: 0.1,
@@ -30,7 +30,7 @@ const GridGlobe = () => {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#6d28d9", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
       order: 1,
