@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Refrences", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -18,7 +18,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zones",
+    title: "Connecting all over the world!",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -74,33 +74,33 @@ export const projects = [
     id: 1,
     title: "Securify",
     des: "A Chrome extension that utilizes VirusTotal's public API and allows users to scan the safety of any website they are currently on.",
-    img: "/p1.svg",
+    img: "/securify.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    link: "https://chromewebstore.google.com/detail/securify/geafkmapmejjfnbkhgggefahiknhmjpd",
   },
   {
     id: 2,
     title: "Original Portfolio Website",
     des: "My first portfolio site, like this one, was designed and developed by me from scratch.",
-    img: "/p2.svg",
+    img: "/ogsite.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    link: "https://alanvnorcott.github.io/",
   },
   {
     id: 3,
     title: "ClickCount",
     des: "This is my first deployed web app; It is a web stats tracker formatted much like a video game.",
-    img: "/p3.svg",
+    img: "/iconLArge.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    link: "https://chromewebstore.google.com/detail/clickcount/peeggfpbhaipfbipleajhbolbhjfifhp",
   },
   {
     id: 4,
     title: "GymTrack",
     des: "A workout tracking app developed with Flutter!",
-    img: "/p4.svg",
+    img: "/GT.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "https://github.com/Alanvnorcott/GymTrack",
   },
 ];
 

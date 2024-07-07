@@ -17,7 +17,7 @@ const Hero = () => {
                 />
                 <Spotlight
                     className="h-[80vh] w-[50vw] top-10 left-full"
-                    fill="purple"
+                    fill="pink"
                 />
                 <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
             </div>
@@ -30,15 +30,15 @@ const Hero = () => {
             <div className="flex justify-center relative my-20 z-10">
             <BackgroundBeams />
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-                    <h2 className="uppercase tracking-widest text-xs text-center text-blue- max-w-80">
-                        Dynamic Web Magic with Next.js
+                    <h2 className="uppercase tracking-widest text-xs text-center text-blue max-w-80">
+                        SWE | FULL STACK | DEVELOPER
                     </h2>
                     <TextGenerateEffect
                         className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                        words="Transforming Concepts into Seamless User Experiences"
+                        words="Designing and Engineering Exceptional User Experiences"
                     />
 
-                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-300">
+                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-black-200 dark:text-white-200">
                       Hi, I&apos;m Alan, a full stack developer based in NYC Metropolitan Area
                     </p>
                     <a href="#about">
