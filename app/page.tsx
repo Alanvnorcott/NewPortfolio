@@ -5,6 +5,9 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
 import { FaHome } from "react-icons/fa";
 import DarkModeToggle from "@/components/DarkModeToggle";
+import Clients from "@/components/Clients";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -18,6 +21,9 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
+        <Clients />
+        <Experience />
+        <Footer />
       </div>
     </main>
   );
