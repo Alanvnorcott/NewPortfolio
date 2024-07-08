@@ -4,7 +4,7 @@ import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 const SocialIcons = () => {
   const socialLinks = [
     { icon: FaTwitter, href: 'https://twitter.com/Alanvnorcott', label: 'Twitter' },
-    { icon: FaLinkedin, href: 'https://linkedin.com/alan-norcott-31161523b/', label: 'LinkedIn' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/alan-norcott-31161523b/', label: 'LinkedIn' },
     { icon: FaGithub, href: 'https://github.com/Alanvnorcott', label: 'GitHub' },
   ];
 
