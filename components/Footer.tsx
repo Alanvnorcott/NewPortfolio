@@ -18,9 +18,9 @@ const Footer = () => {
         <h1 className="heading lg:max-w-[45vw]">
         Want to contact me? <span className="text-blue-400">Click below!</span>
         </h1>
-        <a href="mailto:contact@jsmastery.pro">
+        <a href="https://www.linkedin.com/in/alan-norcott-31161523b/">
           <MagicButton
-            title="Send an email!"
+            title="Add me on LinkedIn!"
             icon={<FaLocationArrow />}
             position="right"
           />

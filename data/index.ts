@@ -90,7 +90,7 @@ export const projects = [
     id: 3,
     title: "ClickCount",
     des: "This is my first deployed web app; It is a web stats tracker formatted much like a video game.",
-    img: "/iconLArge.png",
+    img: "/iconLarge.png",
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/clickcount/peeggfpbhaipfbipleajhbolbhjfifhp",
   },
@@ -177,7 +177,7 @@ export const workExperience = [
     id: 3,
     title: "Cybersecurity Intern - Continuum GRC, INC.",
     desc: "Implemented documentation for diverse security standards (ISO, StateRAMP, FedRAMP, ENS, etc.), adeptly mapping controls across frameworks. Developed client and auditor modules for utility and data collection, demonstrating full stack proficiency. Collaborated closely with a team of two senior-level colleagues, leveraging custom scripts for spreadsheets and creating automation scripts to enhance data flow efficiency.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/cyber.svg",
   },
   {
