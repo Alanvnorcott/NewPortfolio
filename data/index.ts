@@ -113,9 +113,9 @@ export const testimonials = [
   },
   {
     quote:
-      "Collaborating with Alan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Alan's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Alan is the ideal developer. (THIS IS A PLACEHOLDER)",
-    name: "Michael Phillips",
-    title: "Director of Placeholder Technologies, Inc.",
+      "Mr. Norcott demonstrated the ability to think critically, superb problem solving and technical skills. He successfully mastered and applied new concepts and technologies taught in classes. Depending on the setting, he could either productively work on his own or operate effectively as a member of a team. Additionally, Alan showed excellent analytical skills.",
+    name: "MAlex Rudniy, Ph.D.",
+    title: "Associate Professor, Department of Mathematics and Computer Science, Drew University",
   },
   {
     quote:
