@@ -13,7 +13,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/laptop.svg",
+    img: "/laptops.png",
     spareImg: "",
   },
   {
@@ -73,7 +73,7 @@ export const projects = [
   {
     id: 1,
     title: "Securify",
-    des: "A Chrome extension that utilizes VirusTotal's public API and allows users to scan the safety of any website they are currently on.",
+    des: "A Chrome extension that utilizes VirusTotal's public API.",
     img: "/securify.svg",
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/securify/geafkmapmejjfnbkhgggefahiknhmjpd",
@@ -89,15 +89,15 @@ export const projects = [
   {
     id: 3,
     title: "ClickCount",
-    des: "This is my first deployed web app; It is a web stats tracker formatted much like a video game.",
-    img: "/iconLarge.svg",
+    des: "This is my first deployed web app; a web stats tracker.",
+    img: "/iconLarge.svg", 
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/clickcount/peeggfpbhaipfbipleajhbolbhjfifhp",
   },
   {
     id: 4,
     title: "GymTrack",
-    des: "A workout tracking app developed with Flutter!",
+    des: "A workout tracking app developed with Flutter.",
     img: "/GT.svg",
     iconLists: ["/flutter.svg", "/apple.svg", "/android.svg", "/swift.svg", "/gsap.svg"],
     link: "https://github.com/Alanvnorcott/GymTrack",
