@@ -99,7 +99,7 @@ export const projects = [
     title: "GymTrack",
     des: "A workout tracking app developed with Flutter.",
     img: "/GT.svg",
-    iconLists: ["/flutter.svg", "/apple.svg", "/android.svg", "/swift.svg", "/gsap.svg"],
+    iconLists: ["/flutter.svg", "/android.svg", "/swift.svg", "/gsap.svg"],
     link: "https://github.com/Alanvnorcott/GymTrack",
   },
 ];
