@@ -1,5 +1,7 @@
 import React from 'react';
 import { socialMedia } from "@/data";
+import MagicButton from './ui/MagicButton';
+import { FaLocationArrow } from 'react-icons/fa';
 
 const Footer = () => {
   const socialLinks = [
@@ -11,12 +13,18 @@ const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full dark:opacity-50 opacity-30 "
-        />
+      
+      <div className="flex flex-col items-center">
+        <h1 className="heading lg:max-w-[45vw]">
+        Want to contact me? <span className="text-blue-400">Click below!</span>
+        </h1>
+        <a href="mailto:contact@jsmastery.pro">
+          <MagicButton
+            title="Send an email!"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
@@ -24,7 +32,7 @@ const Footer = () => {
           Copyright © 2024 Alan Norcott
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex bg-items-center md:gap-3 gap-6">
           {socialMedia.map((info, index) => (
             <a
               key={info.id}
@@ -37,6 +45,8 @@ const Footer = () => {
               <img src={info.img} alt={socialLinks[index].label} width={20} height={20} />
             </a>
           ))}
+          
+          
         </div>
       </div>
     </footer>
