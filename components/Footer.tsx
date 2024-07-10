@@ -16,7 +16,7 @@ const Footer = () => {
       
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-        Want to contact me? <span className="text-blue-400">Click below!</span>
+        Want to connect with me? <span className="text-blue-400">Click below!</span>
         </h1>
         <a href="https://www.linkedin.com/in/alan-norcott-31161523b/">
           <MagicButton
