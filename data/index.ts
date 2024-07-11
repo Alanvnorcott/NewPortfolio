@@ -114,7 +114,7 @@ export const testimonials = [
   {
     quote:
       "Mr. Norcott demonstrated the ability to think critically, superb problem solving and technical skills. He successfully mastered and applied new concepts and technologies taught in classes. Depending on the setting, he could either productively work on his own or operate effectively as a member of a team. Additionally, Alan showed excellent analytical skills.",
-    name: "MAlex Rudniy, Ph.D.",
+    name: "Alex Rudniy, Ph.D.",
     title: "Associate Professor, Department of Mathematics and Computer Science, Drew University",
   },
   {
