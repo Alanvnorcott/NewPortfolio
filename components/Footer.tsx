@@ -20,7 +20,7 @@ const Footer = () => {
         </h1>
         <a href="https://www.linkedin.com/in/alan-norcott-31161523b/">
           <MagicButton
-            title="Add me on LinkedIn!"
+            title="Connect with me on LinkedIn!"
             icon={<FaLocationArrow />}
             position="right"
           />
