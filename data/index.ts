@@ -72,35 +72,38 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "TrueBirdy",
+    des: "An AI job board, cover letter builder and resume reviewer.",
+    img: "/tb.svg",
+    iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/python.svg"],
+    link: "https://www.truebirdy.com/",
+    
+  },
+  {
+    id: 2,
     title: "Securify",
     des: "A Chrome extension that utilizes VirusTotal's public API.",
     img: "/securify.svg",
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/securify/geafkmapmejjfnbkhgggefahiknhmjpd",
+    
   },
   {
-    id: 2,
+    id: 3,
     title: "This Portfolio Website",
     des: "This portfolio was designed and developed by me.",
     img: "/reGif.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/JS.svg", "/re.svg"],
     link: "https://alanvnorcott.com/",
+    
   },
   {
-    id: 3,
+    id: 4,
     title: "ClickCount",
     des: "This is my first deployed web app; a web stats tracker.",
     img: "/iconLarge.svg", 
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/clickcount/peeggfpbhaipfbipleajhbolbhjfifhp",
-  },
-  {
-    id: 4,
-    title: "GymTrack",
-    des: "A workout tracking app developed with Flutter.",
-    img: "/GT.svg",
-    iconLists: ["/flutter.svg", "/android.svg", "/swift.svg", "/gsap.svg"],
-    link: "https://github.com/Alanvnorcott/GymTrack",
   },
 ];
 
