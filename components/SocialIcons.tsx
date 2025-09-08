@@ -1,11 +1,13 @@
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub, FaSubscript } from 'react-icons/fa';
 
 const SocialIcons = () => {
   const socialLinks = [
     { icon: FaTwitter, href: 'https://twitter.com/Alanvnorcott', label: 'Twitter' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/alan-norcott-31161523b/', label: 'LinkedIn' },
     { icon: FaGithub, href: 'https://github.com/Alanvnorcott', label: 'GitHub' },
+    { icon: () => <img src="/substack.png" alt="Substack" className="w-5 h-5" />, href: 'https://alanvnorcott.substack.com/?utm_campaign=profile_chips', label: 'Substack' },
+    { icon: () => <img src="/mediumLogo.png" alt="Medium" className="w-5 h-5" />, href: 'https://medium.com/@alanvnorcott', label: 'Medium' }
   ];
 
   return (

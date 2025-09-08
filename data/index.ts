@@ -49,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a new NextJS project",
+    title: "Currently working at Dismas Charities!",
     description: "Right now:",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -90,11 +90,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "This Portfolio Website",
-    des: "This portfolio was designed and developed by me.",
-    img: "/reGif.svg",
+    title: "Roll Again",
+    des: " I built a website to help out those who enjoy RPGs when they find themselves stumped on what character to make next. If you are someone who enjoys RPGs and character customization.",
+    img: "/wow.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/JS.svg", "/re.svg"],
-    link: "https://alanvnorcott.com/",
+    link: "https://www.roll-again.com/",
     
   },
   {
@@ -163,18 +163,11 @@ export const companies = [
 
 export const workExperience = [
   {
-    id: 1,
-    title: "Fullstack Engineer Intern - Drew University",
-    desc: "Developed a web application for sorting cross-listed courses using React, JavaScript, HTML, and CSS, enhancing course organization and accessibility. Collaborated with a team of five to ensure seamless integration and functionality. Designed and configured an SQL database to store and parse course offerings, improving data management and retrieval efficiency.",
+    id: 4,
+    title: "Fullstack Developer - Dismas Charities",
+    desc: "I create backend solutions in C# and ASP.NET, integrating business logic and RESTful APIs to improve data processing. On the front end, I create interfaces with Razor and TypeScript, leveraging libraries like React and Tailwind CSS, and connecting seamlessly with .NET backend services for efficient asynchronous data handling. On the data layer, I work with Microsoft SQL Server, building sophisticated stored procedures, implementing indexing strategies, and optimizing queries to improve scalability and performance.",
     className: "md:col-span-2",
-    thumbnail: "/fullstack.svg",
-  },
-  {
-    id: 2,
-    title: "Software Engineer Intern - DIGICLIPS",
-    desc: "Contributed to the development of a client and employee notification system application, utilizing Angular for the front end and Python, JavaScript, and C# for backend functionalities. Collaborated effectively with a team of five to deliver a robust and user-friendly application. Used Angular to build the required single-page application, demonstrating adaptability and a commitment to skill development. Leveraged Python, JavaScript, and C# to implement and optimize backend functionalities, ensuring seamless performance.",
-    className: "md:col-span-2", 
-    thumbnail: "/software.svg",
+    thumbnail: "/solo.svg",
   },
   {
     id: 3,
@@ -184,13 +177,21 @@ export const workExperience = [
     thumbnail: "/cyber.svg",
   },
   {
-    id: 4,
-    title: "Fullstack Developer - Personal",
-    desc: "Developed and maintained user-facing features using modern frontend technologies. Deployed various applications to the chrome store and developed / mantained efficient code.",
+    id: 2,
+    title: "Software Engineer Intern - DIGICLIPS",
+    desc: "Contributed to the development of a client and employee notification system application, utilizing Angular for the front end and Python, JavaScript, and C# for backend functionalities. Collaborated effectively with a team of five to deliver a robust and user-friendly application. Used Angular to build the required single-page application, demonstrating adaptability and a commitment to skill development. Leveraged Python, JavaScript, and C# to implement and optimize backend functionalities, ensuring seamless performance.",
     className: "md:col-span-2",
-    thumbnail: "/solo.svg",
+    thumbnail: "/software.svg",
+  },
+  {
+    id: 1,
+    title: "Fullstack Engineer Intern - Drew University",
+    desc: "Developed a web application for sorting cross-listed courses using React, JavaScript, HTML, and CSS, enhancing course organization and accessibility. Collaborated with a team of five to ensure seamless integration and functionality. Designed and configured an SQL database to store and parse course offerings, improving data management and retrieval efficiency.",
+    className: "md:col-span-2",
+    thumbnail: "/fullstack.svg",
   },
 ];
+
 
 export const socialMedia = [
   {
