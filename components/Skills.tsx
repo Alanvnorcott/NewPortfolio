@@ -117,7 +117,7 @@ const Skills = () => {
                 {category.title}
               </h2>
               <div className="space-y-3">
-                {category.skills.map((skill, skillIndex) => (
+                {category.skills.map((skill) => (
                   <div key={skill.name} className="border-l-2 border-blue-400 pl-3">
                     <h3 className="font-medium text-neutral-800 dark:text-white">
                       {skill.name}
@@ -145,7 +145,7 @@ const Skills = () => {
             </h2>
             <p className="text-lg mb-6">
             Looking for a .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies? 
-            I'm open to new opportunities and relocation.
+            I&apos;m open to new opportunities and relocation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
