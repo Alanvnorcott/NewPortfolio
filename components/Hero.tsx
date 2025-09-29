@@ -56,10 +56,6 @@ const Hero = () => {
                         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
                     >
                         .NET Developer & Python Specialist
-                        {" "}
-                        <Highlight className="text-black dark:text-white">
-                        Building scalable enterprise solutions with .NET, Python, and modern cloud technologies.
-                        </Highlight>
                     </motion.h1>
                     </HeroHighlight>
 
