@@ -1,9 +1,10 @@
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 import RecentProjects from "@/components/RecentProjects";
+import Writing from "@/components/Writing";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
-import DarkModeToggle from "@/components/DarkModeToggle";
 import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
@@ -18,12 +19,11 @@ export default function Home() {
         <div className="absolute top-4 left-4 z-50">
           <SocialIcons />
         </div>
-        <div className="absolute top-4 right-4 z-50">
-          <DarkModeToggle />
-        </div>
         <Hero />
         <Grid />
+        <Skills />
         <RecentProjects />
+        <Writing />
         <Clients />
         <Experience />
         <Footer />

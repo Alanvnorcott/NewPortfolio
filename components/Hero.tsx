@@ -35,7 +35,7 @@ const Hero = () => {
             <BackgroundBeams />
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
                     <h2 className="uppercase tracking-widest text-xs text-center text-blue max-w-80">
-                        SWE | FULL STACK | DEVELOPER
+                        .NET Developer & Python Specialist | Full-Stack Cloud Applications
                     </h2>
 
 
@@ -55,21 +55,21 @@ const Hero = () => {
                         }}
                         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
                     >
-                        Designing and Engineering
+                        .NET Developer & Python Specialist
                         {" "}
                         <Highlight className="text-black dark:text-white">
-                        Exceptional User Experiences.
+                        Building scalable enterprise solutions with .NET, Python, and modern cloud technologies.
                         </Highlight>
                     </motion.h1>
                     </HeroHighlight>
 
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-black-200 dark:text-white-200">
-                      Hi, I&apos;m Alan, a full stack developer based in NYC Metropolitan Area
+                      Hi, I&apos;m Alan, a .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies, based in NYC Metropolitan Area and open to relocation
                     </p>
-                    <a href="#about">
+                    <a href="#about" aria-label="Navigate to about section to learn more about my background and experience">
                         <MagicButton
-                          title="See my work"
+                          title="Explore My Portfolio"
                           icon={<FaArrowPointer />}
                           position="right"
                           

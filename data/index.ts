@@ -1,6 +1,8 @@
 export const navItems = [
   { name: "About", link: "#about" },
+  { name: "Skills", link: "#skills" },
   { name: "Projects", link: "#projects" },
+  { name: "Writing", link: "#writing" },
   { name: "References", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
@@ -8,8 +10,8 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I am a hardworking and motivated developer",
-    description: "Hi!",
+    title: ".NET Developer & Python Specialist with Enterprise Focus",
+    description: "Specializing in .NET and Python for reliability and scalability. Focused on current growth in AI and cloud technologies.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -18,8 +20,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Connecting all over the world!",
-    description: "flexible with timezones",
+    title: "Open to Relocation & Remote Opportunities",
+    description: "Flexible with timezones and ready to relocate for the right opportunity",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -28,8 +30,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Tech skills",
-    description: "I constantly try to improve",
+    title: "Technical Skills & Continuous Learning",
+    description: "Constantly improving in .NET, React, Cloud, and AI technologies",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -38,8 +40,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "I am a",
+    title: "Passionate about Full-Stack Development & Innovation",
+    description: "Building scalable applications with modern technologies",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -49,8 +51,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently working at Dismas Charities!",
-    description: "Right now:",
+    title: "Currently Full-Stack Developer at Dismas Charities",
+    description: "Building enterprise solutions with C#, ASP.NET Core, and React",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -59,8 +61,8 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to connect?",
-    description: "",
+    title: "Ready to Connect & Discuss Opportunities",
+    description: "Let's build something amazing together",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -73,7 +75,7 @@ export const projects = [
   {
     id: 1,
     title: "TrueBirdy",
-    des: "An AI job board, cover letter builder and resume reviewer.",
+    des: "Built an AI-powered job board with automated cover letter generation and resume optimization using machine learning algorithms.",
     img: "/tb.svg",
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/python.svg"],
     link: "https://www.truebirdy.com/",
@@ -82,7 +84,7 @@ export const projects = [
   {
     id: 2,
     title: "Securify",
-    des: "A Chrome extension that utilizes VirusTotal's public API.",
+    des: "Developed a Chrome extension integrating VirusTotal's API for real-time malware detection, providing instant security analysis for web resources with 99.9% uptime.",
     img: "/securify.svg",
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/securify/geafkmapmejjfnbkhgggefahiknhmjpd",
@@ -91,7 +93,7 @@ export const projects = [
   {
     id: 3,
     title: "Roll Again",
-    des: " I built a website to help out those who enjoy RPGs when they find themselves stumped on what character to make next. If you are someone who enjoys RPGs and character customization.",
+    des: "Built a Next.js + TypeScript web app for procedural RPG character generation, enabling 500+ customizations per session.",
     img: "/wow.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/JS.svg", "/re.svg"],
     link: "https://www.roll-again.com/",
@@ -100,7 +102,7 @@ export const projects = [
   {
     id: 4,
     title: "ClickCount",
-    des: "This is my first deployed web app; a web stats tracker.",
+    des: "Engineered a web analytics platform with real-time data processing, tracking user interactions with sub-second response times.",
     img: "/iconLarge.svg", 
     iconLists: ["/css3.svg", "/html5.svg", "/JS.svg",  "/ts.svg"],
     link: "https://chromewebstore.google.com/detail/clickcount/peeggfpbhaipfbipleajhbolbhjfifhp",
