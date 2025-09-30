@@ -20,8 +20,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Open to Relocation & Remote Opportunities",
-    description: "Flexible with timezones and ready to relocate for the right opportunity",
+    title: "Open to Remote Open Sourced Opportunities",
+    description: "Flexible with timezones and ready to work on projects!",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
