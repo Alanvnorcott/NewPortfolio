@@ -11,8 +11,7 @@ const Footer = () => {
             Ready to Build Something Amazing? <span className="text-blue-400">Let&apos;s Connect!</span>
           </h1>
           <p className="text-center text-neutral-600 dark:text-neutral-300 mb-8 max-w-2xl">
-            .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies. 
-            Open to new opportunities and relocation. Let&apos;s discuss your next project!
+            .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies.
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 mb-8">
