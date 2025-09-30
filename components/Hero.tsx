@@ -61,7 +61,7 @@ const Hero = () => {
 
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-black-200 dark:text-white-200">
-                      Hi, I&apos;m Alan, a .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies, based in NYC Metropolitan Area and open to relocation
+                      Hi, I&apos;m Alan, a .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies, based in NYC Metropolitan Area
                     </p>
                     <a href="#about" aria-label="Navigate to about section to learn more about my background and experience">
                         <MagicButton
