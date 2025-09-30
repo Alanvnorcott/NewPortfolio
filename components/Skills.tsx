@@ -145,7 +145,7 @@ const Skills = () => {
             </h2>
             <p className="text-lg mb-6">
             Looking for a .NET Developer and Python Specialist with expertise in enterprise solutions and cloud technologies? 
-            I&apos;m open to new opportunities and relocation.
+            I&apos;m
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
