@@ -99,7 +99,7 @@ const Skills = () => {
           </h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
             Comprehensive full-stack development skills spanning modern web technologies, 
-            cloud platforms, and emerging AI technologies. Open to relocation and remote opportunities.
+            cloud platforms, and emerging AI technologies.
           </p>
         </motion.div>
 
