@@ -48,7 +48,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-2 text-sm text-neutral-500">
               <FaMapMarkerAlt />
-              <span>NYC Metropolitan Area • Open to Relocation</span>
+              <span>NYC Metropolitan Area</span>
             </div>
           </div>
 
