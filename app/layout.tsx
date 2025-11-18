@@ -4,13 +4,14 @@ import { ThemeProvider } from "./provider";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import RecruiterSEO from "@/components/RecruiterSEO";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: ".NET Developer & Python Specialist | Full-Stack Cloud Applications – Open to Relocation | Alan Norcott",
-  description: "Building scalable enterprise solutions with .NET, Python, and modern cloud technologies. Specializing in AI integration, observability, and security. Currently at Dismas Charities, open to relocation.",
-  keywords: "Full-Stack Developer, .NET Developer, React Developer, TypeScript, Python, Azure, AWS, Software Engineer, C#, ASP.NET Core, JavaScript, Node.js, Cloud Computing, AI, Machine Learning, Open to Relocation, NYC, Remote Work",
+  title: ".NET Developer & Python Specialist | Full-Stack Cloud Applications | Alan Norcott",
+  description: "Building scalable enterprise solutions with .NET, Python, and modern cloud technologies. Specializing in AI integration, observability, and security.",
+  keywords: "Full-Stack Developer, .NET Developer, React Developer, TypeScript, Python, Azure, AWS, Software Engineer, C#, ASP.NET Core, JavaScript, Node.js, Cloud Computing, AI, Machine Learning",
   authors: [{ name: "Alan Norcott" }],
   creator: "Alan Norcott",
   openGraph: {
@@ -56,63 +57,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alan Norcott",
-    "jobTitle": ".NET Developer & Python Specialist",
-    "description": "Building scalable enterprise solutions with .NET, Python, and modern cloud technologies. Specializing in AI integration, observability, and security",
-    "url": "https://alannorcott.com",
-    "image": "https://alannorcott.com/ogsite.png",
-    "email": "alannorcott@example.com",
-    "telephone": "+1-XXX-XXX-XXXX",
-    "sameAs": [
-      "https://github.com/alannorcott",
-      "https://linkedin.com/in/alannorcott",
-      "https://alanvnorcott.substack.com"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "NYC Metropolitan Area",
-      "addressRegion": "NY",
-      "addressCountry": "US"
-    },
-    "knowsAbout": [
-      ".NET", "C#", "ASP.NET Core", "React", "TypeScript", "JavaScript", 
-      "Python", "FastAPI", "Azure", "AWS", "Docker", "Kubernetes", 
-      "Terraform", "SQL Server", "OAuth2", "ELK Stack", "Node.js",
-      "Cloud Computing", "AI", "Machine Learning", "Full-Stack Development"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Dismas Charities"
-    },
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "Drew University"
-    },
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Software Engineer",
-      "occupationLocation": {
-        "@type": "City",
-        "name": "NYC Metropolitan Area"
-      },
-      "skills": [
-        ".NET Development", "React Development", "Cloud Computing", 
-        "Full-Stack Development", "AI Integration", "Database Design"
-      ]
-    }
-  };
+  // JSON-LD is injected via app/head.tsx to avoid duplication here.
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favIcon.png" sizes="any" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
       </head>
       <body className={inter.className}>
         <ThemeProvider
@@ -123,6 +73,24 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        {/* Non-rendered SEO helper component */}
+        <RecruiterSEO />
+
+        {/* Robots-friendly invisible keywords block — indexable but not visible */}
+        <span
+          aria-hidden="true"
+          style={{ display: "none", visibility: "hidden" }}
+        >
+          Mid-level software engineer with strengths in backend, cloud, and security engineering.
+          Experience across Azure and AWS using C#, ASP.NET, SQL Server, React, TypeScript, and Python.
+          Projects aligned with engineering teams at Microsoft, GitHub, Atlassian, NVIDIA, Stripe, and Datadog.
+          Familiar with Munich technology ecosystems including BMW, Allianz, Siemens, Celonis, CHECK24, Infineon, and Personio.
+          EU Blue Card eligible engineering background.
+        </span>
+
+        {/* Safe crawler comments; not visible to users */}
+        {/* Targets: mid-level backend engineer .NET Azure; cloud security engineer; API platform;
+           SQL Server performance; AWS↔Azure migration; distributed systems reliability */}
         <Analytics />
         <SpeedInsights />
       </body>

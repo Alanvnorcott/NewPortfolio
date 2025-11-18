@@ -70,8 +70,7 @@ export const BentoGridItem = ({
     )}
     
     style={{
-      background: "rgba(211, 227, 227, 0.2)",
-      backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+      background: "linear-gradient(180deg, rgba(13,16,39,0.9) 0%, rgba(8,10,25,0.9) 100%)",
     }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
@@ -94,6 +93,9 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+        {id === 5 && (
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-transparent" />
+        )}
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center 
@@ -103,42 +105,59 @@ export const BentoGridItem = ({
 
         <div className={cn(
           titleClassName,
-          "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+          "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 z-10"
         )}
         >
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm dark:text-[#C1C2D3] text-blue-400 z-10">
+          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-slate-600 dark:text-slate-300 z-10">
             {description}
           </div>
           <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
             {title}
           </div>
 
-          {id === 2 && <GridGlobe />}
+          {id === 2 && (
+            <div className="absolute inset-0 flex items-center justify-center z-0">
+              <GridGlobe />
+            </div>
+          )}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#a7ade4]"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#a7ade4]"></span>
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+              <div className="relative flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 top-1/2 -translate-y-1/2">
+                <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                  {leftLists.map((item, i) => (
+                    <span
+                      key={i}
+                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-90 lg:opacity-100 rounded-lg text-center bg-gradient-to-r from-purple-500/30 to-blue-500/30 backdrop-blur-md border border-white/20 text-white font-medium shadow-lg shadow-purple-500/20 transition-all hover:scale-105 hover:shadow-purple-500/40"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                  <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-white/10"></span>
+                </div>
+                <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                  <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-white/10"></span>
+                  {rightLists.map((item, i) => (
+                    <span
+                      key={i}
+                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-90 lg:opacity-100 rounded-lg text-center bg-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-md border border-white/20 text-white font-medium shadow-lg shadow-blue-500/20 transition-all hover:scale-105 hover:shadow-blue-500/40"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#a7ade4]"></span>
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#a7ade4]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+            </div>
+          )}
+
+          {id === 5 && (
+            <div className="mt-4 flex flex-wrap gap-2 z-10">
+              {["C#", ".NET", "ASP.NET Core", "React", "MS SQL", "Azure"].map((t) => (
+                <span key={t} className="px-3 py-1 rounded-full text-xs bg-white/10 border border-white/20 text-white/90 backdrop-blur shadow-sm shadow-cyan-500/10">
+                  {t}
+                </span>
+              ))}
             </div>
           )}
 

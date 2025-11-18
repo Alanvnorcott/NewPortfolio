@@ -28,16 +28,7 @@ export const gridItems = [
     img: "",
     spareImg: "",
   },
-  {
-    id: 3,
-    title: "Technical Skills & Continuous Learning",
-    description: "Constantly improving in .NET, React, Cloud, and AI technologies",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
+
   {
     id: 4,
     title: "Passionate about Full-Stack Development & Innovation",
@@ -56,7 +47,7 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
+    img: "",
     spareImg: "/grid.svg",
   },
   {
