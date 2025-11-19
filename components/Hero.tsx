@@ -55,7 +55,7 @@ const Hero = () => {
                         }}
                         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
                     >
-                        .NET Developer & Python Specialist
+                        Alan Norcott
                     </motion.h1>
                     </HeroHighlight>
 
