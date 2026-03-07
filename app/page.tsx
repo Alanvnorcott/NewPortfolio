@@ -1,33 +1,36 @@
+import dynamic from 'next/dynamic';
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
 import RecentProjects from "@/components/RecentProjects";
-import Writing from "@/components/Writing";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
+import DarkModeToggle from "@/components/DarkModeToggle";
 import Clients from "@/components/Clients";
-import Experience from "@/components/Experience";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Footer from "@/components/Footer";
-import SocialIcons from "@/components/SocialIcons"; 
+import SocialIcons from "@/components/SocialIcons";
 
+const LazyExperience = dynamic(() => import('@/components/Experience'), { ssr: false });
+const LazyRecentProjects = dynamic(() => import('@/components/RecentProjects'), { ssr: false });
+const LazyClients = dynamic(() => import('@/components/Clients'), { ssr: false });
+const LazyFooter = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function Home() {
   return (
-    <main className="relative dark:bg-black-100 bg-white-200 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <div className="absolute top-4 left-4 z-50">
-          <SocialIcons />
-        </div>
-        <Hero />
-        <Grid />
-        <Skills />
-        <RecentProjects />
-        <Writing />
-        <Clients />
-        <Experience />
-        <Footer />
+    <main className="bg-white text-black">
+      <FloatingNav navItems={navItems} />
+      <div className="absolute top-4 left-4 z-50">
+        <SocialIcons />
       </div>
+      <div className="absolute top-4 right-4 z-50">
+        <DarkModeToggle />
+      </div>
+      <Hero />
+      <Grid />
+      <ExperienceTimeline />
+      <LazyRecentProjects />
+      <LazyClients />
+      <LazyFooter />
     </main>
   );
 }
