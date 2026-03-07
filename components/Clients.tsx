@@ -19,7 +19,7 @@ const Clients = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className={`bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow ${index % 2 === 0 ? 'transform rotate-1' : 'transform -rotate-1'} relative`}>
                 {/* Abstract quote mark */}
-                <div className='absolute top-4 left-4 text-4xl text-gray-200 font-serif'>"</div>
+                <div className='absolute top-4 left-4 text-4xl text-gray-200 font-serif'>&quot;</div>
                 <p className='text-gray-700 mb-4 leading-relaxed pl-6'>{testimonial.quote}</p>
                 <div className='border-t pt-4'>
                   <p className='font-semibold text-gray-900'>{testimonial.name}</p>
