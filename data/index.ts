@@ -105,7 +105,7 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote: "Alan was one of the best employees I've ever had the pleasure of working with. I say employee because he proved to be much more than \"just\" a software engineer. Alan's ability to communicate clearly and succinctly with all levels of leadership, his ability to grasp complex requirements and translate those into results, and his passion for providing quality results were impressive. I've led software development teams for many years, and Alan proved to be a breath of fresh air on our team. His presence and poise in difficult situations is admirable. Given the opportunity, I would rehire this young man in an instant.",
+    quote: "Alan was one of the best employees I've ever had the pleasure of working with. I say employee because he proved to be much more than &quot;just&quot; a software engineer. Alan's ability to communicate clearly and succinctly with all levels of leadership, his ability to grasp complex requirements and translate those into results, and his passion for providing quality results were impressive. I've led software development teams for many years, and Alan proved to be a breath of fresh air on our team. His presence and poise in difficult situations is admirable. Given the opportunity, I would rehire this young man in an instant.",
     name: "Doug Hamilton",
     title: "Director of Information Technology @ Dismas Charities Inc.",
   },
@@ -127,7 +127,7 @@ export const testimonials = [
   {
     quote: "In my Algorithms course, Alan did what every student should do -- He asked good questions. I really appreciate having a student who wants to learn. And, in that",
     name: "Barry Burd",
-    title: "Algorithms and Computer Science Professor @ Drew University & Author of “Java For Dummies”",
+    title: "Algorithms and Computer Science Professor @ Drew University & Author of &ldquo;Java For Dummies&rdquo;",
   },
 ];
 
