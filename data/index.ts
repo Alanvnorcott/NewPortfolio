@@ -183,15 +183,19 @@ export const education = [
   },
 ];
 
-export const personalInfo = {
-  name: "Alan Norcott",
-  location: "Salt Lake City, Utah, 84119, United States",
-  nationality: "American",
-  dob: "03 April 2002",
-  phone: "+1 609 915 2436",
-  email: "Alanvnorcott@gmail.com",
-  github: "https://github.com/Alanvnorcott",
-  website: "alanvnorcott.com",
+export const personalData = {
+  name: 'Alan Norcott',
+  linkedin: 'https://www.linkedin.com/in/alan-norcott-31161523b/',
+  website: 'alanvnorcott.com',
+  phone: '+1 609 915 2436',
+  email: 'Alanvnorcott@gmail.com',
+  country: 'United States',
+  city: 'Salt Lake City',
+  zipCode: '84119',
+  dob: '04.03.2002',
+  yearsOfExperience: 2,
+  summary: 'Software Engineer building production-grade full-stack systems across media streaming, backend services, and AI-driven internal platforms. Experienced in Python, C#, React, and TypeScript with a focus on distributed architectures and structured data pipelines, delivering measurable operational impact, including a 60 percent reduction in onboarding time through RAG-based knowledge systems. Relocating to Munich with a deliberate long-term plan already underway. Actively advancing German language proficiency and working with government integration programs, including Make it in Munich, to ensure sustained professional and cultural integration. Committed to building a long-term career within the Munich technology ecosystem.',
+  github: 'https://github.com/Alanvnorcott',
 };
 
 export const professionalSummary = "Software Engineer building production-grade full-stack systems across media streaming, backend services, and AI-driven internal platforms. Experienced in Python, C#, React, and TypeScript with a focus on distributed architectures and structured data pipelines, delivering measurable operational impact, including a 60 percent reduction in onboarding time through RAG-based knowledge systems. Relocating to Munich with a deliberate long-term plan already underway. Actively advancing German language proficiency and working with government integration programs, including Make it in Munich, to ensure sustained professional and cultural integration. Committed to building a long-term career within the Munich technology ecosystem.";

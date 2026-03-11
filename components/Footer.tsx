@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 import SocialIcons from './SocialIcons';
+import { personalData } from '@/data';
 
 const Footer = () => {
   return (
