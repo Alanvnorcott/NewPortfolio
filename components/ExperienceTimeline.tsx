@@ -20,7 +20,10 @@ const ExperienceTimeline = () => {
                 <p className="text-gray-700 mb-4">{exp.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {/* Add technologies if available, or TODO */}
+                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">C#</span>
+                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">Python</span>
                   <span className="px-2 py-1 bg-gray-100 text-sm rounded">React</span>
+                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">SQL</span>
                   <span className="px-2 py-1 bg-gray-100 text-sm rounded">TypeScript</span>
                 </div>
               </div>
