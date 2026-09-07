@@ -1,33 +1,26 @@
+'use client'
+
 import React from 'react'
 import { testimonials } from '@/data'
+import { useLanguage } from './LanguageProvider'
 
 const Clients = () => {
+  const { locale } = useLanguage()
   return (
-    <section className='py-20 px-6 md:px-12' id='testimonials'>
-      <div className="max-w-6xl mx-auto">
-        <h1 className='text-3xl font-light text-center mb-16 relative lowercase'>
-          kind words from
-          <span className='text-blue-400'> my references</span>
-          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-28 h-0.5 bg-gradient-to-r from-red-400 to-orange-400"></span>
-        </h1>
-        <div className='relative'>
-          {/* Connecting lines for abstract feel */}
-          <div className='absolute inset-0 flex items-center justify-center'>
-            <div className='w-full h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent'></div>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10'>
+    <section className='border-b-2 border-stone-900 px-6 py-24 text-stone-950 dark:border-stone-100 dark:text-stone-50 md:px-12 md:py-32' id='testimonials'>
+      <div className="mx-auto max-w-6xl">
+        <p className="section-kicker">{locale === 'de' ? '04 / Referenzen' : '04 / References'}</p>
+        <div className='mt-10'>
+          <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className={`bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow ${index % 2 === 0 ? 'transform rotate-1' : 'transform -rotate-1'} relative`}>
-                {/* Abstract quote mark */}
-                <div className='absolute top-4 left-4 text-4xl text-gray-200 font-serif'>&quot;</div>
-                <p className='text-gray-700 mb-4 leading-relaxed pl-6'>{testimonial.quote}</p>
-                <div className='border-t pt-4'>
-                  <p className='font-semibold text-gray-900'>{testimonial.name}</p>
-                  <p className='text-gray-600 text-sm'>{testimonial.title}</p>
-                </div>
-                {/* Floating accent */}
-                <div className={`absolute -top-2 -right-2 w-4 h-4 rounded-full ${index % 3 === 0 ? 'bg-blue-400' : index % 3 === 1 ? 'bg-green-400' : 'bg-purple-400'}`}></div>
-              </div>
+              <blockquote key={index} className={`glass-panel relative flex flex-col p-7 text-stone-950 dark:text-stone-50 ${index === 0 ? 'border-t-[12px] border-t-[#c51f2d] md:col-span-2 lg:col-span-2 lg:p-9' : ''}`}>
+                <div className="mb-5 font-serif text-7xl font-black leading-none text-[#c51f2d] dark:text-[#ff5c68]">&ldquo;</div>
+                <p className={`flex-1 text-stone-700 dark:text-stone-300 ${index === 0 ? 'text-lg leading-8 md:text-xl md:leading-9' : 'leading-7'}`}>{locale === 'de' ? testimonial.quoteDe : testimonial.quote}</p>
+                <footer className="mt-7 border-t-2 border-stone-900 pt-5 dark:border-stone-100">
+                  <p className='font-serif text-lg font-bold'>{testimonial.name}</p>
+                  <p className='mt-1 font-mono text-xs uppercase leading-5 opacity-70'>{locale === 'de' ? testimonial.titleDe : testimonial.title}</p>
+                </footer>
+              </blockquote>
             ))}
           </div>
         </div>

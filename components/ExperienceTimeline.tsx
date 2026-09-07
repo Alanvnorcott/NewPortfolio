@@ -1,30 +1,39 @@
+'use client'
+
 import React from 'react'
 import { workExperience } from '@/data'
+import { Play, Server, Sparkles } from 'lucide-react'
+import { useLanguage } from './LanguageProvider'
 
 const ExperienceTimeline = () => {
+  const { locale } = useLanguage()
+  const copy = locale === 'de' ? {
+    kicker: '02 / Erfahrung',
+    featured: 'Fokus: Video-Plattform',
+  } : {
+    kicker: '02 / Experience',
+    featured: 'Featured: video platform',
+  }
+
   return (
-    <section id="experience" className="py-20 px-6 md:px-12">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-light text-center mb-12 relative lowercase">
-          work experience
-          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-0.5 bg-gradient-to-r from-green-400 to-blue-400"></span>
-        </h2>
-        <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+    <section id="experience" className="border-b-2 border-stone-900 px-6 py-24 text-stone-950 dark:border-stone-100 dark:text-stone-50 md:px-12 md:py-32">
+      <div className="mx-auto max-w-5xl">
+        <p className="section-kicker">{copy.kicker}</p>
+        <div className="relative mt-12">
+          <div className="absolute bottom-0 left-[15px] top-2 w-0.5 bg-stone-900 dark:bg-stone-100 md:left-1/2"></div>
           {workExperience.map((exp, index) => (
-            <div key={exp.id} className="relative pl-12 pb-8">
-              <div className="absolute left-0 w-8 h-8 bg-black rounded-full border-4 border-white"></div>
-              <div className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-xl font-semibold">{exp.title}</h3>
-                <p className="text-gray-600 mb-2">{exp.company} | {exp.location} | {exp.period}</p>
-                <p className="text-gray-700 mb-4">{exp.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {/* Add technologies if available, or TODO */}
-                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">C#</span>
-                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">Python</span>
-                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">React</span>
-                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">SQL</span>
-                  <span className="px-2 py-1 bg-gray-100 text-sm rounded">TypeScript</span>
+            <div key={exp.id} className={`relative mb-8 pl-12 md:flex md:w-1/2 md:pl-0 ${index % 2 === 0 ? 'md:mr-auto md:justify-end md:pr-10' : 'md:ml-auto md:pl-10'}`}>
+              <div className={`absolute left-0 top-7 flex h-8 w-8 items-center justify-center border-4 border-[#f1eadc] shadow-md dark:border-[#191714] md:left-auto ${index % 2 === 0 ? 'md:-right-4' : 'md:-left-4'} ${index === 0 ? 'bg-[#c51f2d] text-white' : 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'}`}>
+                {index === 0 ? <Play size={12} fill="currentColor" /> : <span className="h-1.5 w-1.5 rounded-full bg-current" />}
+              </div>
+              <div className={`glass-panel w-full p-6 transition duration-300 hover:-translate-y-1 ${index === 0 ? 'bg-[#c51f2d] text-white dark:bg-[#c51f2d] dark:text-white md:p-8' : ''}`}>
+                {index === 0 && <div className="mb-5 flex items-center justify-between gap-3"><span className="inline-flex items-center gap-1.5 border-2 border-stone-950 bg-[#f8f1e5] px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-stone-950"><Sparkles size={12}/> {copy.featured}</span><Server size={20}/></div>}
+                <p className={`font-mono text-xs font-bold uppercase tracking-wider ${index === 0 ? 'text-white/80' : 'text-[#c51f2d] dark:text-[#ff5c68]'}`}>{locale === 'de' ? exp.periodDe : exp.period}</p>
+                <h3 className="mt-2 font-serif text-2xl font-bold tracking-tight">{locale === 'de' ? exp.titleDe : exp.title}</h3>
+                <p className="mt-1 text-sm font-bold opacity-70">{exp.company} · {locale === 'de' ? exp.locationDe : exp.location}</p>
+                <p className="mt-5 text-[15px] leading-7 opacity-80">{locale === 'de' ? exp.descDe : exp.desc}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {exp.technologies.map((technology) => <span key={technology} className={`border px-2.5 py-1 font-mono text-[10px] font-bold uppercase ${index === 0 ? 'border-white/60 bg-white/10 text-white' : 'border-stone-500 dark:border-stone-500'}`}>{technology}</span>)}
                 </div>
               </div>
             </div>

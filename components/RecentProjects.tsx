@@ -1,42 +1,43 @@
+'use client'
+
 import { projects } from '@/data'
 import React from 'react'
-
-const colors = ['text-blue-600', 'text-green-600', 'text-purple-600', 'text-red-600'];
+import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
+import { useLanguage } from './LanguageProvider'
 
 const RecentProjects = () => {
+  const { locale } = useLanguage()
   return (
-    <section className='py-20 px-6 md:px-12' id='projects'>
-      <div className="max-w-6xl mx-auto">
-        <h1 className='text-3xl font-light text-center mb-12 relative lowercase'>
-          a collection of {' '}
-          <span className='text-blue-400'>recent projects</span>
-          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"></span>
-        </h1>
-        <div className='relative flex flex-wrap justify-center gap-8'>
-          {projects.map(({ id, title, des, iconLists, link }, index) => (
-            <div
+    <section className='border-b-2 border-stone-900 px-6 py-24 text-stone-950 dark:border-stone-100 dark:text-stone-50 md:px-12 md:py-32' id='projects'>
+      <div className="mx-auto max-w-6xl">
+        <p className="section-kicker">{locale === 'de' ? '03 / Ausgewählte Projekte' : '03 / Selected projects'}</p>
+        <div className='mt-10 grid gap-5 md:grid-cols-2'>
+          {projects.map(({ id, title, des, desDe, iconLists, link }, index) => (
+            <a
               key={id}
-              className={`bg-white rounded-xl shadow-sm border p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden transform ${index % 4 === 0 ? 'rotate-2' : index % 4 === 1 ? '-rotate-1' : index % 4 === 2 ? 'rotate-3' : '-rotate-2'} ${index % 2 === 0 ? 'translate-y-4' : 'translate-y-0'} hover:rotate-0 hover:translate-y-0`}
-              style={{ zIndex: projects.length - index }}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-panel group relative overflow-hidden p-7 transition duration-300 hover:-translate-y-1.5 md:p-9"
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-30'></div>
-              <div className='relative z-10'>
-                <h2 className={`text-2xl font-bold mb-4 ${colors[index % colors.length]}`}>{title}</h2>
-                <p className='text-gray-600 mb-6 leading-relaxed'>{des}</p>
-                <div className='flex flex-wrap gap-4 mb-6 justify-center'>
+              <div className={`absolute inset-y-0 left-0 w-2 ${index % 2 === 0 ? 'bg-[#c51f2d]' : 'bg-stone-900 dark:bg-stone-100'}`} />
+              <div className='relative z-10 flex h-full flex-col'>
+                <div className="flex items-start justify-between gap-4">
+                  <span className="font-mono text-4xl font-black text-stone-300 dark:text-stone-600">0{id}</span>
+                  <span className="border-2 border-stone-900 p-2 text-stone-900 transition group-hover:rotate-45 group-hover:bg-[#c51f2d] group-hover:text-white dark:border-stone-100 dark:text-stone-100"><ArrowUpRight size={17}/></span>
+                </div>
+                <h3 className="mt-6 font-serif text-3xl font-bold tracking-tight">{title}</h3>
+                <p className='mt-3 flex-1 leading-7 text-stone-700 dark:text-stone-300'>{locale === 'de' ? desDe : des}</p>
+                <div className='mt-7 flex flex-wrap gap-2'>
                   {iconLists.map((icon, iconIndex) => (
-                    <div key={iconIndex} className={`w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-200 bg-white shadow-sm transform hover:scale-110 transition-transform ${iconIndex % 2 === 0 ? 'rotate-12' : '-rotate-12'}`}>
-                      <img src={icon} alt="tech" className='w-6 h-6' />
+                    <div key={iconIndex} className="flex h-9 w-9 items-center justify-center border-2 border-stone-900 bg-[#f8f1e5] dark:border-stone-100">
+                      <Image src={icon} alt="" width={18} height={18} />
                     </div>
                   ))}
                 </div>
-                <div className='text-center'>
-                  <a href={link} target="_blank" rel="noopener noreferrer" className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors text-sm font-medium'>
-                    View Project <span className='ml-2'>→</span>
-                  </a>
-                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

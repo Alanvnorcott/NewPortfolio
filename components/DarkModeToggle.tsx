@@ -6,7 +6,7 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 
 const DarkModeToggle = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
@@ -14,11 +14,11 @@ const DarkModeToggle = () => {
 
   return (
     <button
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors duration-200"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="border-2 border-stone-900 bg-[#f8f1e5] p-3 text-stone-950 shadow-[4px_4px_0_#c51f2d] transition hover:-translate-y-1 dark:border-stone-100"
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       aria-label="Toggle dark mode"
     >
-      {theme === 'dark' ? <FaSun className="text-yellow-400" /> : <FaMoon className="text-gray-700" />}
+      {resolvedTheme === 'dark' ? <FaSun className="text-stone-950" /> : <FaMoon />}
     </button>
   );
 };

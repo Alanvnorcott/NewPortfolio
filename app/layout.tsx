@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "./provider";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], preload: true });
-
 export const metadata: Metadata = {
-  title: "Alan Norcott - Software Engineer",
-  description: "Experienced software engineer specializing in React, TypeScript, and video playback technologies. Open to opportunities in Munich and Germany.",
+  title: "Alan Norcott — Video & Platform Engineer",
+  description: "Software engineer specializing in production video playback, TypeScript platforms, release engineering, and cloud infrastructure.",
 };
 
 export default function RootLayout({
@@ -20,14 +18,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favIcon.png" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

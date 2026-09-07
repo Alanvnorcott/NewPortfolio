@@ -2,9 +2,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { personalData } from '@/data';
+import { ArrowDown, Download } from 'lucide-react';
+import { useLanguage } from './LanguageProvider';
 
 const Hero = () => {
-    const [lang, setLang] = useState<'js' | 'python' | 'go' | 'ts' | 'rust' | 'java' | 'csharp' | 'c' | 'cpp' | 'cobol' | 'sql' | 'haskell' | 'nim' | 'binary'>('js');
+    const [lang, setLang] = useState<'js' | 'python' | 'go' | 'ts' | 'rust' | 'java' | 'csharp' | 'c' | 'cpp' | 'cobol' | 'sql' | 'haskell' | 'nim' | 'binary'>('python');
+    const { locale } = useLanguage();
 
     const resumeData = {
         name: personalData.name,
@@ -16,7 +19,7 @@ const Hero = () => {
         phone: personalData.phone,
         dob: personalData.dob,
         yearsOfExperience: personalData.yearsOfExperience,
-        summary: personalData.summary,
+        summary: locale === 'de' ? personalData.summaryDe : personalData.summary,
     };
 
     const generateResumeCode = (language: string) => {
@@ -403,79 +406,79 @@ echo "Summary: ", resume.summary`;
         js: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">const</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&apos;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&apos;</span><span className="text-white">;</span>
+                <span className="ml-6 text-blue-400">const</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&apos;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&apos;</span><span className="text-white">;</span>
             </>
         ),
         python: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span>
+                <span className="ml-6 text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span>
             </>
         ),
         go: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">var</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span>
+                <span className="ml-6 text-blue-400">var</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span>
             </>
         ),
         ts: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">const</span> <span className="text-green-400">name</span><span className="text-blue-300">: string</span> <span className="text-white">=</span> <span className="text-yellow-400">&apos;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&apos;</span><span className="text-white">;</span>
+                <span className="ml-6 text-blue-400">const</span> <span className="text-green-400">name</span><span className="text-blue-300">: string</span> <span className="text-white">=</span> <span className="text-rose-300">&apos;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&apos;</span><span className="text-white">;</span>
             </>
         ),
         rust: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-purple-400">let</span> <span className="text-green-400">name</span><span className="text-blue-300">: &amp;str</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span><span className="text-white">;</span>
+                <span className="ml-6 text-purple-400">let</span> <span className="text-green-400">name</span><span className="text-blue-300">: &amp;str</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span><span className="text-white">;</span>
             </>
         ),
         java: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-red-400">String</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span><span className="text-white">;</span>
+                <span className="ml-6 text-red-400">String</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span><span className="text-white">;</span>
             </>
         ),
         csharp: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">string</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span><span className="text-white">;</span>
+                <span className="ml-6 text-blue-400">string</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span><span className="text-white">;</span>
             </>
         ),
         c: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">char</span><span className="text-white">*</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span><span className="text-white">;</span>
+                <span className="ml-6 text-blue-400">char</span><span className="text-white">*</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span><span className="text-white">;</span>
             </>
         ),
         cpp: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">std::string</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span><span className="text-white">;</span>
+                <span className="ml-6 text-blue-400">std::string</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span><span className="text-white">;</span>
             </>
         ),
         cobol: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">000001</span>
-                <span className="ml-6 text-blue-400">01</span> <span className="text-green-400">NAME</span> <span className="text-purple-400">PIC X(12)</span> <span className="text-blue-400">VALUE</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span><span className="text-white">.</span>
+                <span className="ml-6 text-blue-400">01</span> <span className="text-green-400">NAME</span> <span className="text-purple-400">PIC X(12)</span> <span className="text-blue-400">VALUE</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span><span className="text-white">.</span>
             </>
         ),
         sql: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-blue-400">SELECT</span> <span className="text-yellow-400">&apos;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&apos;</span> <span className="text-blue-400">AS</span> <span className="text-green-400">name</span><span className="text-white">;</span>
+                <span className="ml-6 text-blue-400">SELECT</span> <span className="text-rose-300">&apos;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&apos;</span> <span className="text-blue-400">AS</span> <span className="text-green-400">name</span><span className="text-white">;</span>
             </>
         ),
         haskell: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span>
+                <span className="ml-6 text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span>
             </>
         ),
         nim: (
             <>
                 <span className="absolute left-2 top-1 text-gray-500 text-sm">1</span>
-                <span className="ml-6 text-purple-400">let</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-yellow-400">&quot;</span><span className="text-orange-400">Alan Norcott</span><span className="text-yellow-400">&quot;</span>
+                <span className="ml-6 text-purple-400">let</span> <span className="text-green-400">name</span> <span className="text-white">=</span> <span className="text-rose-300">&quot;</span><span className="text-red-300">Alan Norcott</span><span className="text-rose-300">&quot;</span>
             </>
         ),
         binary: (
@@ -486,43 +489,61 @@ echo "Summary: ", resume.summary`;
         ),
     };
 
+    const languageOptions = [
+        ['js', 'JS'], ['python', 'Python'], ['go', 'Go'], ['ts', 'TS'],
+        ['rust', 'Rust'], ['java', 'Java'], ['csharp', 'C#'], ['c', 'C'],
+        ['cpp', 'C++'], ['cobol', 'COBOL'], ['sql', 'SQL'], ['haskell', 'Haskell'],
+        ['nim', 'Nim'], ['binary', 'Binary'],
+    ] as const;
+
+    const copy = locale === 'de' ? {
+        cta: 'Meine Arbeit ansehen',
+        download: 'Laden als',
+        route: 'Salt Lake City → München',
+    } : {
+        cta: 'See what I ship',
+        download: 'Download as',
+        route: 'Salt Lake City → Munich',
+    };
+
     return (
-        <div className="pb-20 pt-36 px-6 md:px-12">
-            <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-sm uppercase tracking-widest text-gray-600 mb-4">
-                    Software Engineer
-                </h2>
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                    <span className="bg-gray-900 text-white px-4 py-3 rounded-lg font-mono text-2xl md:text-4xl shadow-xl border border-gray-700 inline-block relative">
-                        {codeSnippets[lang]}
-                    </span>
-                </h1>
-                <div className="flex justify-center space-x-2 mb-8 flex-wrap">
-                    <button onClick={() => setLang('js')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'js' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>JS</button>
-                    <button onClick={() => setLang('python')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'python' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Python</button>
-                    <button onClick={() => setLang('go')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'go' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Go</button>
-                    <button onClick={() => setLang('ts')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'ts' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>TS</button>
-                    <button onClick={() => setLang('rust')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'rust' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Rust</button>
-                    <button onClick={() => setLang('java')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'java' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Java</button>
-                    <button onClick={() => setLang('csharp')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'csharp' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>C#</button>
-                    <button onClick={() => setLang('c')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'c' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>C</button>
-                    <button onClick={() => setLang('cpp')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'cpp' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>C++</button>
-                    <button onClick={() => setLang('cobol')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'cobol' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>COBOL</button>
-                    <button onClick={() => setLang('sql')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'sql' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>SQL</button>
-                    <button onClick={() => setLang('haskell')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'haskell' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Haskell</button>
-                    <button onClick={() => setLang('nim')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'nim' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Nim</button>
-                    <button onClick={() => setLang('binary')} className={`px-3 py-1 rounded text-sm font-mono ${lang === 'binary' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}>Binary</button>
+        <section className="relative flex min-h-screen items-center justify-center border-b-2 border-stone-900 px-6 py-28 text-stone-950 dark:border-stone-100 dark:text-stone-50 md:px-12">
+            <div className="relative z-10 mx-auto w-full min-w-0 max-w-3xl">
+                <div className="float-soft min-w-0">
+                    <div className="glass-panel relative min-w-0 p-3 sm:p-5 md:p-7">
+                        <div className="absolute -right-3 -top-3 -z-10 h-24 w-24 bg-[#c51f2d]" />
+                        <div className="overflow-hidden border-2 border-stone-950 bg-[#151412] text-stone-100">
+                            <div className="flex items-center justify-between border-b-2 border-stone-700 px-4 py-3">
+                                <div className="flex gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-rose-400"/><span className="h-2.5 w-2.5 rounded-full bg-amber-300"/><span className="h-2.5 w-2.5 rounded-full bg-emerald-400"/></div>
+                                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-stone-400">identity.{lang}</span>
+                            </div>
+                            <div className="relative min-h-24 overflow-x-auto px-4 py-8 font-mono text-sm sm:text-base">
+                                <div className="min-w-max">{codeSnippets[lang]}</div>
+                            </div>
+                        </div>
+                        <div className="mt-4 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none]">
+                            {languageOptions.map(([value, label]) => (
+                                <button key={value} onClick={() => setLang(value)} aria-pressed={lang === value} className={`shrink-0 border px-3 py-1.5 font-mono text-xs font-bold transition ${lang === value ? 'border-stone-950 bg-[#c51f2d] text-white dark:border-stone-100' : 'border-stone-400 bg-transparent text-stone-700 hover:bg-[#c51f2d] hover:text-white dark:border-stone-600 dark:text-stone-300'}`}>
+                                    {label}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="mt-5 flex items-center gap-3 px-1">
+                            <Image src="/profilePicPurple.png" alt="Alan Norcott" width={52} height={52} className="border-2 border-stone-950" priority />
+                            <div><p className="font-serif text-lg font-bold text-stone-950 dark:text-stone-50">Alan Norcott</p><p className="font-mono text-xs uppercase text-stone-600 dark:text-stone-400">{copy.route}</p></div>
+                        </div>
+                    </div>
                 </div>
-                <button onClick={downloadResume} className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors font-mono text-sm mb-8">
-                    Download Summary as {lang.toUpperCase()} Code
-                </button>
-                <Image src="/profilePicPurple.png" alt="Alan Norcott" width={128} height={128} className="rounded-full mx-auto shadow-lg" />
-                <a href="#experience" className="group relative inline-block text-black font-medium hover:text-gray-700 transition-colors">
-                  View My Work
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-                </a>
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+                    <a href="#experience" className="inline-flex items-center gap-2 border-2 border-stone-950 bg-stone-950 px-6 py-3 font-mono text-sm font-bold uppercase text-[#f8f1e5] shadow-[5px_5px_0_#c51f2d] transition hover:-translate-y-1 hover:shadow-[7px_7px_0_#c51f2d] dark:border-stone-50 dark:bg-stone-50 dark:text-stone-950">
+                        {copy.cta} <ArrowDown size={16} />
+                    </a>
+                    <button onClick={downloadResume} className="inline-flex items-center gap-2 px-2 py-3 font-mono text-xs font-bold uppercase text-stone-700 underline decoration-2 underline-offset-4 transition hover:text-[#c51f2d] dark:text-stone-200 dark:hover:text-[#ff5c68]">
+                        <Download size={16} /> {copy.download} {lang.toUpperCase()}
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
