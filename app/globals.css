@@ -83,6 +83,34 @@
   background: rgba(99, 102, 241, 0.22);
 }
 
+/* A familiar arrow silhouette with a theme-matched interactive state. */
+@media (pointer: fine) {
+  html,
+  body {
+    cursor: url("/cursors/arrow.svg") 2 2, default;
+  }
+
+  a,
+  button,
+  summary,
+  select,
+  label[for],
+  [role="button"],
+  input[type="button"],
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="reset"],
+  input[type="submit"] {
+    cursor: url("/cursors/pointer.svg") 2 2, pointer !important;
+  }
+
+  input:not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="reset"]):not([type="submit"]),
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
+  }
+}
+
 .site-shell {
   color: #201e1a;
   background:
