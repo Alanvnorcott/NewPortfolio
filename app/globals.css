@@ -83,11 +83,11 @@
   background: rgba(99, 102, 241, 0.22);
 }
 
-/* A familiar arrow silhouette with a theme-matched interactive state. */
+/* Embedded so the production build cannot lose the cursor assets. */
 @media (pointer: fine) {
   html,
   body {
-    cursor: url("/cursors/arrow.svg") 2 2, default;
+    cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%3Cpath%20d%3D%22M2.5%202.5v19.2l5.1-5%203.9%208.1%204-1.9-3.8-7.9h7.2L2.5%202.5Z%22%20fill%3D%22%23f3ead9%22%20stroke%3D%22%23f3ead9%22%20stroke-width%3D%224%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M2.5%202.5v19.2l5.1-5%203.9%208.1%204-1.9-3.8-7.9h7.2L2.5%202.5Z%22%20fill%3D%22%23f3ead9%22%20stroke%3D%22%23201e1a%22%20stroke-width%3D%221.5%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M2.5%202.5%2011.7%2015H8.8L2.5%202.5Z%22%20fill%3D%22%23c51f2d%22%2F%3E%0A%3C%2Fsvg%3E") 2 2, default;
   }
 
   a,
@@ -101,7 +101,7 @@
   input[type="radio"],
   input[type="reset"],
   input[type="submit"] {
-    cursor: url("/cursors/pointer.svg") 2 2, pointer !important;
+    cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%3Cpath%20d%3D%22M2.5%202.5v19.2l5.1-5%203.9%208.1%204-1.9-3.8-7.9h7.2L2.5%202.5Z%22%20fill%3D%22%23c51f2d%22%20stroke%3D%22%23f3ead9%22%20stroke-width%3D%224%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M2.5%202.5v19.2l5.1-5%203.9%208.1%204-1.9-3.8-7.9h7.2L2.5%202.5Z%22%20fill%3D%22%23c51f2d%22%20stroke%3D%22%23201e1a%22%20stroke-width%3D%221.5%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E") 2 2, pointer !important;
   }
 
   input:not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="reset"]):not([type="submit"]),
@@ -162,5 +162,86 @@
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
+  }
+}
+
+/* Swipe decks are strictly mobile-only; md+ retains each original layout. */
+@media (max-width: 767px) {
+  .mobile-carousel-track {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-inline: -24px;
+    padding: 4px 24px 20px;
+    height: calc(var(--active-card-height, auto) + 24px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
+    scrollbar-width: none;
+  }
+
+  .mobile-carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-carousel-track > * {
+    flex: 0 0 calc(100% - 20px);
+    min-width: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow-wrap: anywhere;
+  }
+
+  /* Enough trailing space to align the last card exactly like the first. */
+  .mobile-carousel-track::after {
+    content: '';
+    flex: 0 0 0px;
+  }
+
+  .mobile-carousel-track > .glass-panel:hover,
+  .mobile-carousel-track .glass-panel:hover {
+    transform: none;
+  }
+
+  .mobile-excerpt:not([data-expanded='true']) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+
+  .carousel-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid currentColor;
+    background: #f8f1e5;
+    box-shadow: 3px 3px 0 #201e1a;
+  }
+
+  .dark .carousel-arrow {
+    background: #24211d;
+    box-shadow: 3px 3px 0 #ff5c68;
+  }
+
+  .carousel-arrow:disabled {
+    opacity: 0.3;
+    box-shadow: none;
+  }
+
+  .carousel-arrow:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .mobile-carousel-track:focus-visible,
+  .carousel-arrow:focus-visible {
+    outline: 2px solid #c51f2d;
+    outline-offset: 4px;
   }
 }

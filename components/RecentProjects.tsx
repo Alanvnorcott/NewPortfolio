@@ -5,14 +5,15 @@ import React from 'react'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { useLanguage } from './LanguageProvider'
+import MobileCarousel from './MobileCarousel'
 
 const RecentProjects = () => {
   const { locale } = useLanguage()
   return (
-    <section className='border-b-2 border-stone-900 px-6 py-24 text-stone-950 dark:border-stone-100 dark:text-stone-50 md:px-12 md:py-32' id='projects'>
+    <section className='border-b-2 border-stone-900 px-6 py-16 text-stone-950 dark:border-stone-100 dark:text-stone-50 md:px-12 md:py-32' id='projects'>
       <div className="mx-auto max-w-6xl">
         <p className="section-kicker">{locale === 'de' ? '03 / Ausgewählte Projekte' : '03 / Selected projects'}</p>
-        <div className='mt-10 grid gap-5 md:grid-cols-2'>
+        <MobileCarousel className='mt-10 grid gap-5 md:grid-cols-2' label={locale === 'de' ? 'Projekte' : 'Projects'}>
           {projects.map(({ id, title, des, desDe, period, periodDe, iconLists, link }, index) => {
             const cardContent = <>
               <div className={`absolute inset-y-0 left-0 w-2 ${index % 2 === 0 ? 'bg-[#c51f2d]' : 'bg-stone-900 dark:bg-stone-100'}`} />
@@ -47,7 +48,7 @@ const RecentProjects = () => {
               </article>
             )
           })}
-        </div>
+        </MobileCarousel>
       </div>
     </section>
   )
