@@ -3,9 +3,7 @@
 import React from 'react'
 import { workExperience } from '@/data'
 import { BrainCircuit, Database, Music2, Play, Server, ShieldCheck } from 'lucide-react'
-import { useLanguage } from './LanguageProvider'
-import MobileCarousel from './MobileCarousel'
-import MobileExcerpt from './MobileExcerpt'
+import { MobileCarousel, MobileExcerpt, useLanguage } from './LanguageProvider'
 
 const roleIcons = [Play, BrainCircuit, ShieldCheck, Music2, Database]
 

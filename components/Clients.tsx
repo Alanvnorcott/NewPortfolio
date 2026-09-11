@@ -2,9 +2,7 @@
 
 import React from 'react'
 import { testimonials } from '@/data'
-import { useLanguage } from './LanguageProvider'
-import MobileCarousel from './MobileCarousel'
-import MobileExcerpt from './MobileExcerpt'
+import { MobileCarousel, MobileExcerpt, useLanguage } from './LanguageProvider'
 
 const Clients = () => {
   const { locale } = useLanguage()

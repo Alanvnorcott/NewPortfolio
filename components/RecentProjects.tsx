@@ -4,8 +4,7 @@ import { projects } from '@/data'
 import React from 'react'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
-import { useLanguage } from './LanguageProvider'
-import MobileCarousel from './MobileCarousel'
+import { MobileCarousel, useLanguage } from './LanguageProvider'
 
 const RecentProjects = () => {
   const { locale } = useLanguage()
